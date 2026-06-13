@@ -1,0 +1,12 @@
+# Large or reproducible local artifacts
+raw_pdfs/
+outputs/week2_sample_outputs/parsed_texts/
+source_company_list_star_2021_2025.xlsx
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local packages and temporary references
+_partner_week2_reference/
+_partner_week2_reference.zip
