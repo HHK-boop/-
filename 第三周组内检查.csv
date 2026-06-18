@@ -1,0 +1,13 @@
+reviewer,reviewee,company_name,stock_code,board,ipo_year,listing_date_check,prospectus_url_check,version_check,code_reproducible,section_location_reasonable,json_has_evidence,main_problem,review_comment
+陈雨昂,霍泓锟,捷众科技,920690,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,云星宇,920806,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,康农种业,920403,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,许昌智能,920496,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,海昇药业,920656,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,铁拓机械,920706,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,科力股份,920088,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,科拜尔,920066,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,聚星科技,920111,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,万源通,920060,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,XD胜业电,920128,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
+陈雨昂,霍泓锟,科隆新材,920098,北交所,2024,pass,pass,pass,pass,pass,pass,无重大问题；候选抽取为规则结果,按company_list、下载日志、解析日志、定位日志和JSON证据字段逐项检查；样本属于北交所且年份正确，招股书标题为正式招股说明书。
