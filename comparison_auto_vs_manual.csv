@@ -1,0 +1,5 @@
+﻿record_id,manual_event_type,manual_status,auto_id,auto_status,match_level,review_comment
+KG-GOLD-001,directed_issuance,keep,AUTO-001,candidate_keep,matched_type_and_page,自动候选与manual gold的事件类型一致，仍需人工确认字段含义。
+KG-GOLD-002,pevc_preipo_holding,keep,AUTO-002,candidate_keep_but_not_financing_round,matched_type_and_page,自动候选与manual gold的事件类型一致，仍需人工确认字段含义。
+KG-GOLD-003,ipo_issue_endpoint,keep,AUTO-003,candidate_keep,matched_type_and_page,自动候选与manual gold的事件类型一致，仍需人工确认字段含义。
+KG-GOLD-004,subsidiary_equity_transfer,exclude,AUTO-004,false_positive_exclude,matched_false_positive,自动流程召回该页，但manual gold将其标为排除样本，说明需要主体判断。

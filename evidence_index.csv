@@ -1,0 +1,7 @@
+﻿page,description,screenshot,screenshot_exists
+19,发行决策、审批、公开发行数量及发行价格相关信息,evidence_p019_issue_overview.png,True
+46,2020年定向发行：发行数量、发行价格、募集资金用途,evidence_p046_financing.png,True
+47,定向发行验资：募集资金总额与注册资本变更,evidence_p047_capital_verified.png,True
+50,楚商澴锋5%以上股东及私募基金备案信息,evidence_p050_chushang_basic.png,True
+52,发行前股东结构表：楚商澴锋持股数量和比例,evidence_p052_top_shareholders.png,True
+159,子公司股权收购/转让和合并范围变化，作为误判样本,evidence_p159_subsidiary_changes.png,True
