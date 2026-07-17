@@ -1,0 +1,9 @@
+﻿sample_id,board,stock_code,company_short,pdf_file,file_size_mb,page_count,pdf_path
+MB001,主板,603072,天和磁材,MB001_603072_包头天和磁材科技股份有限公司_招股说明书.pdf,7.48,564,C:\Users\29818\Desktop\霍泓锟 第一周\eight_company_pe_gold_standard_submission\data\raw_pdfs\MB001_603072_包头天和磁材科技股份有限公司_招股说明书.pdf
+MB002,主板,603418,友升股份,MB002_603418_上海友升铝业股份有限公司_招股说明书.pdf,5.72,398,C:\Users\29818\Desktop\霍泓锟 第一周\eight_company_pe_gold_standard_submission\data\raw_pdfs\MB002_603418_上海友升铝业股份有限公司_招股说明书.pdf
+GEM001,创业板,301581,黄山谷捷,GEM001_301581_黄山谷捷股份有限公司_招股说明书.pdf,5.44,343,C:\Users\29818\Desktop\霍泓锟 第一周\eight_company_pe_gold_standard_submission\data\raw_pdfs\GEM001_301581_黄山谷捷股份有限公司_招股说明书.pdf
+GEM002,创业板,301563,云汉芯城,GEM002_301563_云汉芯城（上海）互联网科技股份有限公司_招股说明书.pdf,10.89,443,C:\Users\29818\Desktop\霍泓锟 第一周\eight_company_pe_gold_standard_submission\data\raw_pdfs\GEM002_301563_云汉芯城（上海）互联网科技股份有限公司_招股说明书.pdf
+STAR001,科创板,688758,赛分科技,STAR001_688758_苏州赛分科技股份有限公司_招股说明书.pdf,8.09,468,C:\Users\29818\Desktop\霍泓锟 第一周\eight_company_pe_gold_standard_submission\data\raw_pdfs\STAR001_688758_苏州赛分科技股份有限公司_招股说明书.pdf
+STAR002,科创板,688775,影石创新,STAR002_688775_影石创新科技股份有限公司_招股说明书.pdf,9.58,555,C:\Users\29818\Desktop\霍泓锟 第一周\eight_company_pe_gold_standard_submission\data\raw_pdfs\STAR002_688775_影石创新科技股份有限公司_招股说明书.pdf
+BSE001,北交所,920100,三协电机,BSE001_920100_常州三协电机股份有限公司_招股说明书.pdf,6.1,382,C:\Users\29818\Desktop\霍泓锟 第一周\eight_company_pe_gold_standard_submission\data\raw_pdfs\BSE001_920100_常州三协电机股份有限公司_招股说明书.pdf
+BSE002,北交所,920091,大鹏工业,BSE002_920091_哈尔滨岛田大鹏工业股份有限公司_招股说明书.pdf,6.76,391,C:\Users\29818\Desktop\霍泓锟 第一周\eight_company_pe_gold_standard_submission\data\raw_pdfs\BSE002_920091_哈尔滨岛田大鹏工业股份有限公司_招股说明书.pdf

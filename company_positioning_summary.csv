@@ -1,0 +1,9 @@
+﻿sample_id,board,company_short,positioned_pages,gold_records,located_markdown
+MB001,主板,天和磁材,100,2,outputs/located_markdown/MB001_positioned_sections.md
+MB002,主板,友升股份,95,11,outputs/located_markdown/MB002_positioned_sections.md
+GEM001,创业板,黄山谷捷,67,2,outputs/located_markdown/GEM001_positioned_sections.md
+GEM002,创业板,云汉芯城,70,17,outputs/located_markdown/GEM002_positioned_sections.md
+STAR001,科创板,赛分科技,70,11,outputs/located_markdown/STAR001_positioned_sections.md
+STAR002,科创板,影石创新,89,14,outputs/located_markdown/STAR002_positioned_sections.md
+BSE001,北交所,三协电机,43,2,outputs/located_markdown/BSE001_positioned_sections.md
+BSE002,北交所,大鹏工业,49,2,outputs/located_markdown/BSE002_positioned_sections.md

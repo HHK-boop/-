@@ -1,0 +1,47 @@
+{
+  "schema_version": "2026-07-17.pevc_gold.v1",
+  "principles": [
+    "先 TOC/目录定位，再精准截取相关章节，禁止将全量 PDF 直接投喂给 LLM。",
+    "MinerU 或兼容解析输出统一采用 Markdown，表格用 Markdown 表格保留。",
+    "investor_type 先分类，再按类别进入不同字段 Schema。",
+    "PDF 未披露的字段保持空值，不用推断值填充。",
+    "自动抽取结果必须与人工 gold standard 分开保存，并量化准确率。"
+  ],
+  "gold_fields": [
+    "record_id",
+    "sample_id",
+    "board",
+    "stock_code",
+    "company_short",
+    "company_full",
+    "investor_name",
+    "investor_type",
+    "is_pe_vc",
+    "disclosure_status",
+    "holding_shares_10k",
+    "holding_ratio_pct",
+    "investment_event_type",
+    "investment_date",
+    "investment_amount_10k_yuan",
+    "investment_price_yuan_per_share",
+    "pe_fund_filing_code",
+    "fund_manager_gp",
+    "gp_registration_code",
+    "lp_structure",
+    "lp_count",
+    "source_pages",
+    "source_section",
+    "evidence_text",
+    "manual_check_status",
+    "blank_reason"
+  ],
+  "company_type_prompt_notes": {
+    "制造业/新材料": "优先检查历史沿革、发行前股东、私募投资基金备案章节；谨慎区分供应商/客户与投资人。",
+    "制造业/汽车零部件": "重点关注新增股东、股权转让、员工持股平台和产业投资人。",
+    "互联网/电子元器件交易": "投资主体可能跨境或平台化，优先抽取股东基本情况和新增股东入股原因。",
+    "科创/生命科学工具": "专业基金和外资股东可能较多，必须保留 Markdown 表格结构。",
+    "科创/智能影像设备": "投资人和 LP 结构披露较多，先用表格抽取再做字段拆分。",
+    "制造业/电机": "北交所样本常见员工平台、地方创投和私募基金并存，先分类再抽字段。",
+    "制造业/工业清洗设备": "有限合伙不一定是 PE 基金，员工持股平台应单独排除。"
+  }
+}

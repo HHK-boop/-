@@ -3,25 +3,29 @@ from __future__ import annotations
 import csv
 import json
 import sys
-import zipfile
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DIR = ROOT / "outputs"
+OUTPUTS = ROOT / "outputs"
 REQUIRED_FILES = [
-    ROOT / "data" / "raw" / "kangnong_prospectus.pdf",
-    ROOT / "data" / "manual_gold" / "kangnong_manual_gold.csv",
-    ROOT / "code" / "kangnong_pipeline.py",
+    ROOT / "config" / "sample_manifest.csv",
+    ROOT / "config" / "investor_type_taxonomy.csv",
+    ROOT / "config" / "schema_config.json",
+    ROOT / "data" / "manual_gold" / "eight_company_manual_gold.csv",
+    ROOT / "code" / "eight_company_pipeline.py",
     ROOT / "run_pipeline.py",
-    OUTPUT_DIR / "manual_gold.csv",
-    OUTPUT_DIR / "manual_gold.jsonl",
-    OUTPUT_DIR / "auto_output_candidates.csv",
-    OUTPUT_DIR / "auto_output_candidates.jsonl",
-    OUTPUT_DIR / "comparison_auto_vs_manual.csv",
-    OUTPUT_DIR / "validation_report.md",
-    OUTPUT_DIR / "evidence_index.csv",
-    OUTPUT_DIR / "teacher_discussion_questions.md",
+    OUTPUTS / "pdf_inventory.csv",
+    OUTPUTS / "toc_keyword_positioning.csv",
+    OUTPUTS / "gold_standard.csv",
+    OUTPUTS / "gold_standard.jsonl",
+    OUTPUTS / "auto_output_candidates.csv",
+    OUTPUTS / "comparison_auto_vs_manual.csv",
+    OUTPUTS / "accuracy_metrics.csv",
+    OUTPUTS / "gold_standard_report.md",
+    OUTPUTS / "accuracy_report.md",
+    OUTPUTS / "markdown_tables" / "gold_standard_all.md",
+    OUTPUTS / "markdown_tables" / "markdown_table_extraction_report.md",
 ]
 
 
@@ -30,64 +34,57 @@ def read_csv(path: Path) -> list[dict]:
         return list(csv.DictReader(f))
 
 
-def assert_true(condition: bool, message: str, errors: list[str]) -> None:
-    if not condition:
-        errors.append(message)
+def fail(message: str, errors: list[str]) -> None:
+    errors.append(message)
 
 
 def main() -> int:
     errors: list[str] = []
 
-    for file_path in REQUIRED_FILES:
-        assert_true(file_path.exists(), f"missing file: {file_path}", errors)
-        if file_path.exists():
-            assert_true(file_path.stat().st_size > 0, f"empty file: {file_path}", errors)
+    pdfs = list((ROOT / "data" / "raw_pdfs").glob("*.pdf"))
+    if len(pdfs) != 8:
+        fail(f"expected 8 raw PDFs, got {len(pdfs)}", errors)
+    for pdf in pdfs:
+        if pdf.stat().st_size < 1024 * 100:
+            fail(f"PDF too small: {pdf.name}", errors)
 
-    if (OUTPUT_DIR / "manual_gold.csv").exists():
-        manual = read_csv(OUTPUT_DIR / "manual_gold.csv")
-        assert_true(len(manual) == 4, "manual_gold should contain 4 records", errors)
-        statuses = {row.get("gold_status", "") for row in manual}
-        assert_true({"keep", "exclude"}.issubset(statuses), "manual_gold should include keep and exclude records", errors)
-        assert_true(all(row.get("source_pages") for row in manual), "manual_gold records must have source_pages", errors)
+    for path in REQUIRED_FILES:
+        if not path.exists():
+            fail(f"missing file: {path}", errors)
+        elif path.stat().st_size == 0:
+            fail(f"empty file: {path}", errors)
 
-    if (OUTPUT_DIR / "auto_output_candidates.csv").exists():
-        auto = read_csv(OUTPUT_DIR / "auto_output_candidates.csv")
-        assert_true(len(auto) >= 4, "auto_output should contain at least 4 candidate records", errors)
-        assert_true(
-            any(row.get("candidate_status") == "false_positive_exclude" for row in auto),
-            "auto_output should keep a false-positive example",
-            errors,
-        )
+    if (OUTPUTS / "gold_standard.csv").exists():
+        gold = read_csv(OUTPUTS / "gold_standard.csv")
+        sample_ids = {row["sample_id"] for row in gold}
+        if sample_ids != {"MB001", "MB002", "GEM001", "GEM002", "STAR001", "STAR002", "BSE001", "BSE002"}:
+            fail(f"gold sample ids mismatch: {sample_ids}", errors)
+        if len(gold) < 55:
+            fail(f"gold should contain at least 55 records, got {len(gold)}", errors)
+        if not any(row["investor_type"] == "员工持股平台" for row in gold):
+            fail("gold must include employee-platform exclusion examples", errors)
+        if not any(row["blank_reason"] for row in gold):
+            fail("gold must include blank_reason examples for PDF-undisclosed fields", errors)
+        if not any(row["pe_fund_filing_code"] for row in gold):
+            fail("gold must include disclosed PE fund filing codes", errors)
 
-    if (OUTPUT_DIR / "comparison_auto_vs_manual.csv").exists():
-        comparison = read_csv(OUTPUT_DIR / "comparison_auto_vs_manual.csv")
-        assert_true(len(comparison) == 4, "comparison should contain 4 records", errors)
-        assert_true(
-            any(row.get("match_level") == "matched_false_positive" for row in comparison),
-            "comparison should flag matched_false_positive",
-            errors,
-        )
+    if (OUTPUTS / "accuracy_metrics.csv").exists():
+        metrics = {row["metric"]: row for row in read_csv(OUTPUTS / "accuracy_metrics.csv")}
+        for metric in [
+            "investor_type_accuracy",
+            "filing_code_accuracy_when_pdf_disclosed",
+            "gp_name_accuracy_when_pdf_disclosed",
+        ]:
+            if metric not in metrics:
+                fail(f"missing metric: {metric}", errors)
 
-    if (OUTPUT_DIR / "evidence_index.csv").exists():
-        evidence = read_csv(OUTPUT_DIR / "evidence_index.csv")
-        assert_true(len(evidence) >= 6, "evidence_index should contain key PDF pages", errors)
-        assert_true(
-            all(row.get("screenshot_exists") == "True" for row in evidence),
-            "all evidence screenshots should exist",
-            errors,
-        )
-
-    if (OUTPUT_DIR / "validation_report.md").exists():
-        text = (OUTPUT_DIR / "validation_report.md").read_text(encoding="utf-8")
-        assert_true(text.count("PASS") >= 4, "validation_report should contain at least 4 PASS checks", errors)
-
-    if (OUTPUT_DIR / "auto_output_candidates.jsonl").exists():
-        with (OUTPUT_DIR / "auto_output_candidates.jsonl").open("r", encoding="utf-8") as f:
+    if (OUTPUTS / "gold_standard.jsonl").exists():
+        with (OUTPUTS / "gold_standard.jsonl").open("r", encoding="utf-8") as f:
             for line_no, line in enumerate(f, 1):
                 try:
                     json.loads(line)
                 except json.JSONDecodeError as exc:
-                    errors.append(f"invalid jsonl at line {line_no}: {exc}")
+                    fail(f"invalid jsonl line {line_no}: {exc}", errors)
 
     if errors:
         print("SUBMISSION CHECK FAILED")
@@ -96,7 +93,7 @@ def main() -> int:
         return 1
 
     print("SUBMISSION CHECK PASSED")
-    print("manual_gold, auto_output, comparison, validation and evidence files are complete.")
+    print("Eight-company positioning, gold standard, Markdown tables and accuracy files are complete.")
     return 0
 
 

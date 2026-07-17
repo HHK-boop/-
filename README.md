@@ -1,44 +1,43 @@
-# PE/VC招股说明书项目 - 第一周交付包
+# 八家公司PE基金定位与Gold Standard提交包
 
-姓名：霍泓锟
+姓名：霍泓锟  
+任务：八家公司招股书 PE/VC 投资人定位、`investor_type` 分类、PE基金深度字段提取与 gold standard 输出
 
-本目录按老师任务书的第一周要求整理，目标是“统一样本、跑通最小闭环”。当前已完成 8 家公共样本的招股说明书来源整理、PDF下载、文本解析、相关章节定位、候选文本截取、样本JSON生成和结构校验。
+## 核心产出
 
-## 目录说明
+| 文件 | 说明 |
+|---|---|
+| `outputs/gold_standard.csv` | 人工确认后的 gold standard 主表，共 61 条记录 |
+| `outputs/gold_standard.jsonl` | 便于后续导入数据库的 JSON Lines |
+| `outputs/eight_company_gold_standard.xlsx` | Excel 汇总，含 gold、自动对比、准确率、PDF清单 |
+| `outputs/toc_keyword_positioning.csv` | 代码定位页码和关键词命中证据 |
+| `outputs/located_markdown/` | 每家公司精准截取后的 Markdown 证据页 |
+| `outputs/markdown_tables/` | 由 gold 输出的 Markdown 表格，避免表格结构丢失 |
+| `outputs/auto_output_candidates.csv` | 规则抽取候选结果 |
+| `outputs/comparison_auto_vs_manual.csv` | 自动候选与人工 gold 的字段级对比 |
+| `outputs/accuracy_report.md` | 自动/人工准确率量化报告 |
+| `docs/methodology.md` | 方法说明：TOC/关键词定位、Markdown表格、分类和空值原则 |
+| `docs/manual_review_guide.md` | 人工复核和双人一致性对比操作指南 |
 
-- `company_lists/week1_public_samples.csv`：第一周8家公共样本清单，含公司、代码、板块、招股书链接、上市日期和处理状态。
-- `raw_pdfs/`：下载后的8份招股说明书PDF。
-- `outputs/week1_parsed_texts/`：PDF解析后的全文文本。
-- `outputs/week1_candidate_texts/`：按关键词和页码定位切出的候选证据文本。
-- `outputs/week1_sample_json/`：结构化抽取结果，每个JSON对应一家公司。
-- `logs/`：下载、解析、定位、抽取、校验日志。
-- `source_notes/`：数据来源、下载方法、网站采集方法和版本选择规则说明。
-- `weekly_reports/week1.md`：第一周汇报。
-- `code/`：各环节可复现脚本。
+## 一键复现
 
-## 运行顺序
-
-在 `C:\Users\29818\Desktop\霍泓锟 第一周\team-star` 下依次运行：
-
-```powershell
-python code/01_build_company_list/build_week1_company_list.py
-python code/03_download_pdfs/download_week1_pdfs.py
-python code/04_parse_pdf_to_markdown/parse_pdfs.py
-python code/05_locate_relevant_sections/locate_sections.py
-python code/06_extract_pevc_info/extract_pevc_info.py
-python code/07_validate_outputs/validate_outputs.py
+```bash
+pip install -r requirements.txt
+python run_pipeline.py
+python code/check_submission.py
 ```
 
-本次运行结果：8份PDF全部下载成功，8份全文解析成功，8家公司均生成候选文本和JSON，结构校验均通过；其中部分公司因投资方字段保守抽取，被标记为需人工复核。
+自检通过时会看到：
 
-## Week 2补充
+```text
+SUBMISSION CHECK PASSED
+Eight-company positioning, gold standard, Markdown tables and accuracy files are complete.
+```
 
-第二周已新增2025年科创板市场级处理流程：
+## 方法要点
 
-- 企业清单：`company_lists/week2_2025_company_list.csv`
-- 来源说明：`source_notes/2025_company_list_source.md`
-- 输出目录：`outputs/week2_sample_outputs/`
-- 周报：`weekly_reports/week2.md`
-- PR说明：`PR_WEEK2_DESCRIPTION.md`
-
-第二周处理结果：2025年科创板19家公司全部完成PDF获取、轻量解析、候选章节定位、候选JSON抽取和结构校验。所有JSON均为候选级结果，统一标记为需人工复核。
+1. 先通过目录/关键词定位章节，再截取相关 Markdown，不全量投喂 PDF。
+2. `investor_type` 先分类，再按 PE基金、VC基金、证券公司私募、员工持股平台、普通企业投资人分别处理。
+3. PE基金深度字段优先提取备案编码、基金管理人/GP、管理人登记编号、LP结构披露情况。
+4. PDF 未披露的字段保持空值，并在 `blank_reason` 写明原因。
+5. 自动候选与人工 gold 分开保存，用 `comparison_auto_vs_manual.csv` 量化差异。
