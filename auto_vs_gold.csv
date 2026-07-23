@@ -1,0 +1,4 @@
+﻿table_name,metric,status,detail
+subscription,record_level_match,INFO,TP=88; FP=0; FN=0; key=stock_code+subscriber_name+pdf_page
+transfer,record_level_match,INFO,TP=3; FP=13; FN=1; key=stock_code+transferee_name+pdf_page
+equity_snapshot,record_level_match,INFO,TP=623; FP=0; FN=0; key=stock_code+shareholder_name+pdf_page

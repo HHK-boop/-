@@ -1,0 +1,97 @@
+check_type,stock_code,record_id,status,metric,detail
+subscription_price,001282,AUTO-SUB-001282-013,PASS,0,"金额/股数=4.5000, PDF单价=4.5"
+subscription_price,301563,AUTO-SUB-301563-001,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,301563,AUTO-SUB-301563-002,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,301563,AUTO-SUB-301563-003,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,301563,AUTO-SUB-301563-004,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,301563,AUTO-SUB-301563-018,INFO,27.8009,PDF未直接披露单价
+subscription_price,301563,AUTO-SUB-301563-023,PASS,0.0038,"金额/股数=29.1262, PDF单价=29.13"
+subscription_price,301563,AUTO-SUB-301563-024,PASS,0.0038,"金额/股数=29.1262, PDF单价=29.13"
+subscription_price,301563,AUTO-SUB-301563-025,PASS,0.0038,"金额/股数=29.1262, PDF单价=29.13"
+subscription_price,301563,AUTO-SUB-301563-026,PASS,0.0038,"金额/股数=29.1262, PDF单价=29.13"
+subscription_price,301563,AUTO-SUB-301563-027,PASS,0.0038,"金额/股数=29.1262, PDF单价=29.13"
+subscription_price,301563,AUTO-SUB-301563-028,PASS,0.0038,"金额/股数=29.1262, PDF单价=29.13"
+subscription_price,301563,AUTO-SUB-301563-029,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,301563,AUTO-SUB-301563-030,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,301563,AUTO-SUB-301563-031,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,301563,AUTO-SUB-301563-032,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,301563,AUTO-SUB-301563-033,PASS,0.0013,"金额/股数=44.2287, PDF单价=44.23"
+subscription_price,301563,AUTO-SUB-301563-034,PASS,0.0001,"金额/股数=51.6001, PDF单价=51.6"
+subscription_price,301563,AUTO-SUB-301563-035,PASS,0.0001,"金额/股数=51.6001, PDF单价=51.6"
+subscription_price,301581,AUTO-SUB-301581-003,PASS,0,"金额/股数=23.5500, PDF单价=23.55"
+subscription_price,603418,AUTO-SUB-603418-001,PASS,0,"金额/股数=8.3333, PDF单价=8.3333"
+subscription_price,603418,AUTO-SUB-603418-002,PASS,0,"金额/股数=8.3333, PDF单价=8.3333"
+subscription_price,603418,AUTO-SUB-603418-003,PASS,0,"金额/股数=8.3333, PDF单价=8.3333"
+subscription_price,603418,AUTO-SUB-603418-004,PASS,0,"金额/股数=33.6323, PDF单价=33.6323"
+subscription_price,603418,AUTO-SUB-603418-005,PASS,0,"金额/股数=33.6323, PDF单价=33.6323"
+subscription_price,603418,AUTO-SUB-603418-006,PASS,0,"金额/股数=33.6323, PDF单价=33.6323"
+subscription_price,603418,AUTO-SUB-603418-007,PASS,0,"金额/股数=33.6323, PDF单价=33.6323"
+subscription_price,603418,AUTO-SUB-603418-008,PASS,0,"金额/股数=33.6323, PDF单价=33.6323"
+subscription_price,603418,AUTO-SUB-603418-009,PASS,0,"金额/股数=33.6323, PDF单价=33.6323"
+subscription_price,603418,AUTO-SUB-603418-010,PASS,0,"金额/股数=33.6323, PDF单价=33.6323"
+subscription_price,603418,AUTO-SUB-603418-011,PASS,0,"金额/股数=33.6323, PDF单价=33.6323"
+subscription_price,603418,AUTO-SUB-603418-012,PASS,0,"金额/股数=33.6323, PDF单价=33.6323"
+subscription_price,603418,AUTO-SUB-603418-013,PASS,0.0001,"金额/股数=33.6324, PDF单价=33.6323"
+subscription_price,688758,AUTO-SUB-688758-001,INFO,0.0127,PDF未直接披露单价
+subscription_price,688758,AUTO-SUB-688758-002,INFO,0.0127,PDF未直接披露单价
+subscription_price,688758,AUTO-SUB-688758-003,INFO,0.0127,PDF未直接披露单价
+subscription_price,688758,AUTO-SUB-688758-004,INFO,0.0127,PDF未直接披露单价
+subscription_price,688758,AUTO-SUB-688758-005,INFO,0.0127,PDF未直接披露单价
+subscription_price,688758,AUTO-SUB-688758-006,INFO,0.0127,PDF未直接披露单价
+subscription_price,688758,AUTO-SUB-688758-007,INFO,0.0127,PDF未直接披露单价
+subscription_price,688758,AUTO-SUB-688758-008,INFO,0.0127,PDF未直接披露单价
+subscription_price,688758,AUTO-SUB-688758-009,INFO,0.0127,PDF未直接披露单价
+subscription_price,688758,AUTO-SUB-688758-010,INFO,0.0127,PDF未直接披露单价
+subscription_price,920100,AUTO-SUB-920100-001,PASS,0,"金额/股数=4.4800, PDF单价=4.48"
+subscription_price,920100,AUTO-SUB-920100-002,PASS,0,"金额/股数=4.4800, PDF单价=4.48"
+subscription_price,920100,AUTO-SUB-920100-003,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-004,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-005,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-006,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-007,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-008,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-009,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-010,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-011,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-012,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-013,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-014,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-015,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-016,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920100,AUTO-SUB-920100-017,PASS,0,"金额/股数=5.4100, PDF单价=5.41"
+subscription_price,920116,AUTO-SUB-920116-001,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,920116,AUTO-SUB-920116-002,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,920116,AUTO-SUB-920116-003,PASS,0,"金额/股数=1.0000, PDF单价=1.0"
+subscription_price,920116,AUTO-SUB-920116-004,PASS,0,"金额/股数=6.3000, PDF单价=6.3"
+subscription_price,920116,AUTO-SUB-920116-005,PASS,0,"金额/股数=6.3000, PDF单价=6.3"
+subscription_price,920116,AUTO-SUB-920116-006,PASS,0,"金额/股数=6.3000, PDF单价=6.3"
+snapshot_ratio_sum,001282,,PASS,100,2004-06-18设立后: 持股比例合计=100.0000%
+snapshot_ratio_sum,001282,,PASS,100.01,2007-12增资后: 持股比例合计=100.0100%
+snapshot_ratio_sum,001282,,PASS,100,2014-05增资后: 持股比例合计=100.0000%
+snapshot_ratio_sum,001282,,PASS,100,2017-02增资后: 持股比例合计=100.0000%
+snapshot_ratio_sum,001282,,PASS,100,2017-11增资后: 持股比例合计=100.0000%
+snapshot_ratio_sum,001282,,PASS,100,t0/报告期初: 持股比例合计=100.0000%
+snapshot_ratio_sum,301563,,PASS,99.99,t0/整体变更设立股份公司（2015-12-03）: 持股比例合计=99.9900%
+snapshot_ratio_sum,301563,,PASS,99.99,2018年4月第一次股权转让后: 持股比例合计=99.9900%
+snapshot_ratio_sum,301563,,PASS,99.99,2018年7月C轮增资及第二次股权转让后: 持股比例合计=99.9900%
+snapshot_ratio_sum,301563,,PASS,99.98,2019年8月第三次股权转让后: 持股比例合计=99.9800%
+snapshot_ratio_sum,301563,,PASS,99.99,2020年5月D轮增资后: 持股比例合计=99.9900%
+snapshot_ratio_sum,301563,,PASS,99.97,2020年9月D+轮增资及第四次股权转让后（IPO前最终结构）: 持股比例合计=99.9700%
+snapshot_ratio_sum,301581,,REVIEW,,t0/报告期初: 无可求和比例
+snapshot_ratio_sum,301581,,REVIEW,,吸收合并后: 无可求和比例
+snapshot_ratio_sum,301581,,REVIEW,,第一次增资后: 无可求和比例
+snapshot_ratio_sum,301581,,REVIEW,,第二次增资后: 无可求和比例
+snapshot_ratio_sum,301581,,REVIEW,,整体变更为股份公司后: 无可求和比例
+snapshot_ratio_sum,603418,,PASS,100,t0/报告期初: 持股比例合计=100.0000%
+snapshot_ratio_sum,603418,,PASS,100,2020-09-09整体变更后: 持股比例合计=100.0000%
+snapshot_ratio_sum,603418,,PASS,100,2020-09-30增资后: 持股比例合计=100.0000%
+snapshot_ratio_sum,603418,,PASS,100.01,2022-12-19增资后: 持股比例合计=100.0100%
+snapshot_ratio_sum,688758,,REVIEW,670.6317,t0/报告期初: 持股比例合计=670.6317%
+snapshot_ratio_sum,688775,,PASS,100,t_m1/深圳岚锋设立时: 持股比例合计=100.0000%
+snapshot_ratio_sum,688775,,PASS,100,t0/报告期初: 持股比例合计=100.0000%
+snapshot_ratio_sum,688775,,PASS,100,t1/股份公司设立时: 持股比例合计=100.0000%
+snapshot_ratio_sum,688775,,PASS,100,t2/2023年3月股权转让后: 持股比例合计=100.0000%
+snapshot_ratio_sum,920100,,PASS,100.01,发行前（截至招股说明书签署日）: 持股比例合计=100.0100%
+snapshot_ratio_sum,920116,,PASS,100,t0-公司设立日: 持股比例合计=100.0000%
+snapshot_ratio_sum,920116,,PASS,100,代持解除后: 持股比例合计=100.0000%
+snapshot_ratio_sum,920116,,PASS,100,发行前-招股说明书签署日: 持股比例合计=100.0000%

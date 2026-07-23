@@ -1,0 +1,9 @@
+sample_id,stock_code,board,company_short,company_full,required_week6_sample,input_status,source_note
+MB001,603418,主板,友升股份,上海友升铝业股份有限公司,yes,PDF+raw_response,统一8家公司之一；沿用本地PDF并使用页码化证据输入
+MB002,001282,主板,三联锻造,芜湖三联锻造股份有限公司,yes,raw_response,老师要求补入；本地暂未取得PDF，使用保存的页码化证据输入复跑Auto
+GEM001,301581,创业板,黄山谷捷,黄山谷捷股份有限公司,yes,PDF+raw_response,统一8家公司之一；沿用本地PDF并使用页码化证据输入
+GEM002,301563,创业板,云汉芯城,云汉芯城（上海）互联网科技股份有限公司,yes,PDF+raw_response,统一8家公司之一；沿用本地PDF并使用页码化证据输入
+STAR001,688758,科创板,赛分科技,苏州赛分科技股份有限公司,yes,PDF+raw_response,统一8家公司之一；沿用本地PDF并使用页码化证据输入
+STAR002,688775,科创板,影石创新,影石创新科技股份有限公司,yes,PDF+raw_response,统一8家公司之一；沿用本地PDF并使用页码化证据输入
+BSE001,920100,北交所,三协电机,常州三协电机股份有限公司,yes,PDF+raw_response,统一8家公司之一；沿用本地PDF并使用页码化证据输入
+BSE002,920116,北交所,星图测控,中科星图测控技术股份有限公司,yes,raw_response,老师要求补入；本地暂未取得PDF，使用保存的页码化证据输入复跑Auto
