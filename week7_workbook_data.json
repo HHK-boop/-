@@ -1,0 +1,633 @@
+{
+  "summary": [
+    {
+      "metric": "统一样本公司数",
+      "value": 8,
+      "note": "来自Week6 Final三表合并去重"
+    },
+    {
+      "metric": "认缴/增资记录数",
+      "value": 97,
+      "note": "新增investor_type_final"
+    },
+    {
+      "metric": "股权快照记录数",
+      "value": 634,
+      "note": "新增investor_type_final"
+    },
+    {
+      "metric": "股权转让记录数",
+      "value": 4,
+      "note": "新增转让方/受让方分类"
+    },
+    {
+      "metric": "Cross-check PASS",
+      "value": 79,
+      "note": "可直接通过规则校验"
+    },
+    {
+      "metric": "Cross-check INFO",
+      "value": 11,
+      "note": "PDF未披露或需解释留空"
+    },
+    {
+      "metric": "Cross-check REVIEW",
+      "value": 6,
+      "note": "进入本周人工复核清单"
+    }
+  ],
+  "company_records": [
+    {
+      "stock_code": "001282",
+      "company_short": "三联锻造",
+      "market": "主板",
+      "subscription_records": 13,
+      "snapshot_records": 23,
+      "transfer_records": 0
+    },
+    {
+      "stock_code": "301563",
+      "company_short": "云汉芯城",
+      "market": "创业板",
+      "subscription_records": 35,
+      "snapshot_records": 129,
+      "transfer_records": 1
+    },
+    {
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "market": "创业板",
+      "subscription_records": 3,
+      "snapshot_records": 21,
+      "transfer_records": 0
+    },
+    {
+      "stock_code": "603418",
+      "company_short": "友升股份",
+      "market": "主板",
+      "subscription_records": 13,
+      "snapshot_records": 32,
+      "transfer_records": 0
+    },
+    {
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "market": "科创板",
+      "subscription_records": 10,
+      "snapshot_records": 316,
+      "transfer_records": 0
+    },
+    {
+      "stock_code": "688775",
+      "company_short": "影石创新",
+      "market": "科创板",
+      "subscription_records": 0,
+      "snapshot_records": 81,
+      "transfer_records": 1
+    },
+    {
+      "stock_code": "920100",
+      "company_short": "三协电机",
+      "market": "北交所",
+      "subscription_records": 17,
+      "snapshot_records": 19,
+      "transfer_records": 0
+    },
+    {
+      "stock_code": "920116",
+      "company_short": "星图测控",
+      "market": "北交所",
+      "subscription_records": 6,
+      "snapshot_records": 13,
+      "transfer_records": 2
+    }
+  ],
+  "investor_type_stats": [
+    {
+      "investor_type_final": "自然人",
+      "record_count": 527,
+      "share": 0.7209
+    },
+    {
+      "investor_type_final": "VC",
+      "record_count": 57,
+      "share": 0.078
+    },
+    {
+      "investor_type_final": "PE",
+      "record_count": 53,
+      "share": 0.0725
+    },
+    {
+      "investor_type_final": "员工持股平台",
+      "record_count": 47,
+      "share": 0.0643
+    },
+    {
+      "investor_type_final": "产业资本/CVC/法人股东",
+      "record_count": 32,
+      "share": 0.0438
+    },
+    {
+      "investor_type_final": "其他投资平台",
+      "record_count": 15,
+      "share": 0.0205
+    }
+  ],
+  "investor_type_dictionary": [
+    {
+      "investor_type_final": "自然人",
+      "classification_rule": "姓名或auto分类为自然人/其他；且不含公司、合伙、基金、投资等机构关键词",
+      "boundary_note": "保留个人姓名，不强行判断是否为创始人",
+      "example": "孙国奉、曾烨"
+    },
+    {
+      "investor_type_final": "员工持股平台",
+      "classification_rule": "名称包含员工持股、持股平台、员工平台等",
+      "boundary_note": "若仅为普通合伙企业但未披露员工属性，则放入其他投资平台",
+      "example": "员工持股平台/合伙企业"
+    },
+    {
+      "investor_type_final": "控股股东/实际控制人",
+      "classification_rule": "证据或auto分类明确披露控股股东、实际控制人、创始人",
+      "boundary_note": "不能仅凭持股比例自动判断，需PDF证据",
+      "example": "实际控制人相关主体"
+    },
+    {
+      "investor_type_final": "政府基金/国资平台",
+      "classification_rule": "名称含国资、政府、财政、引导基金、国有、高新投等",
+      "boundary_note": "如同时含创投，优先标政府/国资背景",
+      "example": "政府引导基金、国资平台"
+    },
+    {
+      "investor_type_final": "VC",
+      "classification_rule": "名称含创业投资、创投、风险投资等早期投资关键词",
+      "boundary_note": "如同时为政府引导基金，标为政府基金/国资平台",
+      "example": "某某创业投资"
+    },
+    {
+      "investor_type_final": "PE",
+      "classification_rule": "名称含私募、股权投资基金、投资基金、资本管理、资产管理等",
+      "boundary_note": "只做分类，不推断具体轮次",
+      "example": "某某股权投资基金"
+    },
+    {
+      "investor_type_final": "产业资本/CVC/法人股东",
+      "classification_rule": "名称含公司、集团、实业、产业或auto为产业资本/法人股东",
+      "boundary_note": "公司型投资者不一定是CVC，保留CVC/法人股东并待复核",
+      "example": "深圳市云汉电子有限公司"
+    },
+    {
+      "investor_type_final": "其他/待人工复核",
+      "classification_rule": "关键词不足或同一主体可能存在多重身份",
+      "boundary_note": "进入人工复核队列，后续以PDF和工商/基金备案信息确认",
+      "example": "一般合伙企业"
+    }
+  ],
+  "missing_summary": [
+    {
+      "table_name": "subscription",
+      "field": "pdf_page",
+      "records": 97,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "subscription",
+      "field": "event_date",
+      "records": 97,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "subscription",
+      "field": "subscriber_name",
+      "records": 97,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "subscription",
+      "field": "subscription_shares_wan",
+      "records": 97,
+      "missing_count": 12,
+      "missing_rate": 0.1237,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "subscription",
+      "field": "subscription_amount_wan",
+      "records": 97,
+      "missing_count": 13,
+      "missing_rate": 0.134,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "subscription",
+      "field": "subscription_price_yuan",
+      "records": 97,
+      "missing_count": 34,
+      "missing_rate": 0.3505,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "subscription",
+      "field": "source_evidence",
+      "records": 97,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "subscription",
+      "field": "investor_type_final",
+      "records": 97,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "pdf_page",
+      "records": 634,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "time_point",
+      "records": 634,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "shareholder_name",
+      "records": 634,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "shares_held_wan",
+      "records": 634,
+      "missing_count": 195,
+      "missing_rate": 0.3076,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "capital_contribution_wan",
+      "records": 634,
+      "missing_count": 263,
+      "missing_rate": 0.4148,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "shareholding_ratio_pct",
+      "records": 634,
+      "missing_count": 227,
+      "missing_rate": 0.358,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "source_evidence",
+      "records": 634,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "investor_type_final",
+      "records": 634,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "transfer",
+      "field": "pdf_page",
+      "records": 4,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "transfer",
+      "field": "transfer_date",
+      "records": 4,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "transfer",
+      "field": "transferor_name",
+      "records": 4,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "transfer",
+      "field": "transferee_name",
+      "records": 4,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "transfer",
+      "field": "transferred_shares_wan",
+      "records": 4,
+      "missing_count": 3,
+      "missing_rate": 0.75,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "transfer",
+      "field": "transfer_amount_wan",
+      "records": 4,
+      "missing_count": 1,
+      "missing_rate": 0.25,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "transfer",
+      "field": "transfer_price_yuan",
+      "records": 4,
+      "missing_count": 4,
+      "missing_rate": 1.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    },
+    {
+      "table_name": "transfer",
+      "field": "source_evidence",
+      "records": 4,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week7_principle": "PDF未披露则留空，不用0或外部资料补值"
+    }
+  ],
+  "issue_log": [
+    {
+      "issue_id": "W7-QA-001",
+      "stock_code": "301563",
+      "company_short": "云汉芯城",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-002",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-003",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-004",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-005",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-006",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-007",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-008",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-009",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-010",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-011",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "subscription_price",
+      "status": "INFO",
+      "detail": "PDF未直接披露单价",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-012",
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "source": "cross_check",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "REVIEW",
+      "detail": "t0/报告期初: 无可求和比例",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-013",
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "source": "cross_check",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "REVIEW",
+      "detail": "吸收合并后: 无可求和比例",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-014",
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "source": "cross_check",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "REVIEW",
+      "detail": "第一次增资后: 无可求和比例",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-015",
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "source": "cross_check",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "REVIEW",
+      "detail": "第二次增资后: 无可求和比例",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-016",
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "source": "cross_check",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "REVIEW",
+      "detail": "整体变更为股份公司后: 无可求和比例",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W7-QA-017",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "cross_check",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "REVIEW",
+      "detail": "t0/报告期初: 持股比例合计=670.6317%",
+      "week7_action": "INFO保留说明；REVIEW进入PDF人工复核，不自动补值"
+    },
+    {
+      "issue_id": "W6-001",
+      "stock_code": "",
+      "company_short": "样本范围",
+      "source": "intra_group_review",
+      "issue_type": "组内互查差异",
+      "status": "已修正",
+      "detail": "上一版使用天和磁材、大鹏工业替代统一样本",
+      "week7_action": "本版改为统一8家公司，补入三联锻造和星图测控，manifest中不再出现603072/920091。"
+    },
+    {
+      "issue_id": "W6-002",
+      "stock_code": "",
+      "company_short": "三联锻造",
+      "source": "intra_group_review",
+      "issue_type": "组内互查差异",
+      "status": "已修正",
+      "detail": "有限公司阶段部分记录只有注册资本/出资额，没有股份数和单价",
+      "week7_action": "认缴表保留出资金额，股份数和单价留空，不写0；快照表以注册资本口径核对。"
+    },
+    {
+      "issue_id": "W6-003",
+      "stock_code": "",
+      "company_short": "星图测控",
+      "source": "intra_group_review",
+      "issue_type": "组内互查差异",
+      "status": "已修正",
+      "detail": "同一段代持解除文本包含两条转让，Auto只识别出一条",
+      "week7_action": "Final手工拆为罗永红->牛威、王金林->吴功友两条，并记录source_auto_record_id。"
+    },
+    {
+      "issue_id": "W6-004",
+      "stock_code": "",
+      "company_short": "三协电机/星图测控",
+      "source": "intra_group_review",
+      "issue_type": "组内互查差异",
+      "status": "已记录",
+      "detail": "定向发行材料中出现“公开转让系统”，Auto误认为股权转让候选",
+      "week7_action": "不进入Final转让表，只保留在review_queue和差异记录中作为失败案例。"
+    },
+    {
+      "issue_id": "W6-005",
+      "stock_code": "",
+      "company_short": "云汉芯城/影石创新/赛分科技",
+      "source": "intra_group_review",
+      "issue_type": "组内互查差异",
+      "status": "已记录",
+      "detail": "多轮融资与历史沿革表格密集，Auto候选多但转让主体不总是可直接解析",
+      "week7_action": "认缴表和快照表保留完整；转让表只保留可确认事件，其他进入复核队列。"
+    },
+    {
+      "issue_id": "W6-006",
+      "stock_code": "",
+      "company_short": "赛分科技",
+      "source": "intra_group_review",
+      "issue_type": "组内互查差异",
+      "status": "已记录",
+      "detail": "部分记录的股份数单位疑似为股而非万股，直接用金额/股份数会得到0.01元/股等异常价格。",
+      "week7_action": "Auto flags标记单位异常；融资报告均价剔除不合理计算价，保留原始证据等待人工复核。"
+    }
+  ],
+  "auto_vs_gold": [
+    {
+      "table_name": "subscription",
+      "metric": "record_level_match",
+      "status": "INFO",
+      "detail": "TP=88; FP=0; FN=0; key=stock_code+subscriber_name+pdf_page"
+    },
+    {
+      "table_name": "transfer",
+      "metric": "record_level_match",
+      "status": "INFO",
+      "detail": "TP=3; FP=13; FN=1; key=stock_code+transferee_name+pdf_page"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "metric": "record_level_match",
+      "status": "INFO",
+      "detail": "TP=623; FP=0; FN=0; key=stock_code+shareholder_name+pdf_page"
+    }
+  ]
+}
