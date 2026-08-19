@@ -1,0 +1,5 @@
+﻿table_name,total_records,pdf_page_coverage,evidence_coverage,investor_type_coverage,review_queue_items,quality_note
+subscription,97,100.0,100.0,100.0,0,已具备描述性统计基础；REVIEW项需人工回PDF确认。
+equity_snapshot,634,100.0,100.0,100.0,1,已具备描述性统计基础；REVIEW项需人工回PDF确认。
+transfer,4,100.0,100.0,100.0,0,已具备描述性统计基础；REVIEW项需人工回PDF确认。
+cross_table,735,,,,9,来自组内互查与跨表口径差异，保留为问题追踪项。

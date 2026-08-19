@@ -1,0 +1,625 @@
+{
+  "summary": {
+    "run_time": "2026-08-13 13:50:11",
+    "company_count": 8,
+    "subscription_records": 97,
+    "snapshot_records": 634,
+    "transfer_records": 4,
+    "broad_pevc_records": 157,
+    "p1_review_items": 7
+  },
+  "task_status": [
+    {
+      "week8_task": "完善8家公司三表数据质量",
+      "status": "已完成基础审计",
+      "evidence_file": "data/derived/quality_metrics_week8.csv",
+      "remaining_work": "P1问题仍需回PDF人工核验。"
+    },
+    {
+      "week8_task": "统一investor_type分类口径",
+      "status": "已完成统计与覆盖率检查",
+      "evidence_file": "data/derived/investor_type_stats_week8.csv",
+      "remaining_work": "复杂基金仍需备案编码、GP/LP结构辅助确认。"
+    },
+    {
+      "week8_task": "整理组内互查差异",
+      "status": "已转入问题队列",
+      "evidence_file": "review/week8_review_queue.csv",
+      "remaining_work": "下一周逐条标注处理结果。"
+    },
+    {
+      "week8_task": "建立PostgreSQL初步表结构",
+      "status": "已扩展schema和导入脚本",
+      "evidence_file": "database/schema_postgresql_week8.sql",
+      "remaining_work": "拿到数据库连接信息后执行全量导入。"
+    },
+    {
+      "week8_task": "补充本周短报告",
+      "status": "已完成",
+      "evidence_file": "report/霍泓锟_第八周任务报告.pdf",
+      "remaining_work": "报告可继续根据老师反馈补充PDF原文页码截图。"
+    }
+  ],
+  "company_summary": [
+    {
+      "stock_code": "001282",
+      "company_short": "三联锻造",
+      "market": "主板",
+      "subscription_records": 13,
+      "snapshot_records": 23,
+      "transfer_records": 0,
+      "total_records": 36,
+      "broad_pevc_records": 8,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0
+    },
+    {
+      "stock_code": "603418",
+      "company_short": "友升股份",
+      "market": "主板",
+      "subscription_records": 13,
+      "snapshot_records": 32,
+      "transfer_records": 0,
+      "total_records": 45,
+      "broad_pevc_records": 14,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0
+    },
+    {
+      "stock_code": "301563",
+      "company_short": "云汉芯城",
+      "market": "创业板",
+      "subscription_records": 35,
+      "snapshot_records": 129,
+      "transfer_records": 1,
+      "total_records": 165,
+      "broad_pevc_records": 87,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0
+    },
+    {
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "market": "创业板",
+      "subscription_records": 3,
+      "snapshot_records": 21,
+      "transfer_records": 0,
+      "total_records": 24,
+      "broad_pevc_records": 12,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0
+    },
+    {
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "market": "科创板",
+      "subscription_records": 10,
+      "snapshot_records": 316,
+      "transfer_records": 0,
+      "total_records": 326,
+      "broad_pevc_records": 22,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0
+    },
+    {
+      "stock_code": "688775",
+      "company_short": "影石创新",
+      "market": "科创板",
+      "subscription_records": 0,
+      "snapshot_records": 81,
+      "transfer_records": 1,
+      "total_records": 82,
+      "broad_pevc_records": 3,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0
+    },
+    {
+      "stock_code": "920100",
+      "company_short": "三协电机",
+      "market": "北交所",
+      "subscription_records": 17,
+      "snapshot_records": 19,
+      "transfer_records": 0,
+      "total_records": 36,
+      "broad_pevc_records": 4,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0
+    },
+    {
+      "stock_code": "920116",
+      "company_short": "星图测控",
+      "market": "北交所",
+      "subscription_records": 6,
+      "snapshot_records": 13,
+      "transfer_records": 2,
+      "total_records": 21,
+      "broad_pevc_records": 7,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0
+    }
+  ],
+  "quality_metrics": [
+    {
+      "table_name": "subscription",
+      "total_records": 97,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0,
+      "investor_type_coverage": 100.0,
+      "review_queue_items": 0,
+      "quality_note": "已具备描述性统计基础；REVIEW项需人工回PDF确认。"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "total_records": 634,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0,
+      "investor_type_coverage": 100.0,
+      "review_queue_items": 1,
+      "quality_note": "已具备描述性统计基础；REVIEW项需人工回PDF确认。"
+    },
+    {
+      "table_name": "transfer",
+      "total_records": 4,
+      "pdf_page_coverage": 100.0,
+      "evidence_coverage": 100.0,
+      "investor_type_coverage": 100.0,
+      "review_queue_items": 0,
+      "quality_note": "已具备描述性统计基础；REVIEW项需人工回PDF确认。"
+    },
+    {
+      "table_name": "cross_table",
+      "total_records": 735,
+      "pdf_page_coverage": "",
+      "evidence_coverage": "",
+      "investor_type_coverage": "",
+      "review_queue_items": 9,
+      "quality_note": "来自组内互查与跨表口径差异，保留为问题追踪项。"
+    }
+  ],
+  "investor_type_stats": [
+    {
+      "investor_type_final": "自然人",
+      "record_count": 527,
+      "share": 72.09
+    },
+    {
+      "investor_type_final": "VC",
+      "record_count": 57,
+      "share": 7.8
+    },
+    {
+      "investor_type_final": "PE",
+      "record_count": 53,
+      "share": 7.25
+    },
+    {
+      "investor_type_final": "员工持股平台",
+      "record_count": 47,
+      "share": 6.43
+    },
+    {
+      "investor_type_final": "产业资本/CVC/法人股东",
+      "record_count": 32,
+      "share": 4.38
+    },
+    {
+      "investor_type_final": "其他投资平台",
+      "record_count": 15,
+      "share": 2.05
+    }
+  ],
+  "transfer_party_stats": [
+    {
+      "party_role": "transferee",
+      "investor_type_final": "自然人",
+      "party_count": 4,
+      "share": 50.0
+    },
+    {
+      "party_role": "transferor",
+      "investor_type_final": "产业资本/CVC/法人股东",
+      "party_count": 1,
+      "share": 12.5
+    },
+    {
+      "party_role": "transferor",
+      "investor_type_final": "其他/待人工复核",
+      "party_count": 1,
+      "share": 12.5
+    },
+    {
+      "party_role": "transferor",
+      "investor_type_final": "自然人",
+      "party_count": 2,
+      "share": 25.0
+    }
+  ],
+  "missing_summary_top": [
+    {
+      "table_name": "transfer",
+      "field": "transfer_price_yuan",
+      "records": 4,
+      "missing_count": 4,
+      "missing_rate": 100.0,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "subscription",
+      "field": "subscription_ratio_pct",
+      "records": 97,
+      "missing_count": 94,
+      "missing_rate": 96.91,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "transfer",
+      "field": "transferred_shares_wan",
+      "records": 4,
+      "missing_count": 3,
+      "missing_rate": 75.0,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "total_shares_wan",
+      "records": 634,
+      "missing_count": 332,
+      "missing_rate": 52.37,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "total_capital_wan",
+      "records": 634,
+      "missing_count": 280,
+      "missing_rate": 44.16,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "capital_contribution_wan",
+      "records": 634,
+      "missing_count": 263,
+      "missing_rate": 41.48,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "shareholding_ratio_pct",
+      "records": 634,
+      "missing_count": 227,
+      "missing_rate": 35.8,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "subscription",
+      "field": "subscription_price_yuan",
+      "records": 97,
+      "missing_count": 34,
+      "missing_rate": 35.05,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "shares_held_wan",
+      "records": 634,
+      "missing_count": 195,
+      "missing_rate": 30.76,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "transfer",
+      "field": "transfer_amount_wan",
+      "records": 4,
+      "missing_count": 1,
+      "missing_rate": 25.0,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "transfer",
+      "field": "transfer_ratio_pct",
+      "records": 4,
+      "missing_count": 1,
+      "missing_rate": 25.0,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "subscription",
+      "field": "subscription_amount_wan",
+      "records": 97,
+      "missing_count": 13,
+      "missing_rate": 13.4,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "subscription",
+      "field": "subscription_shares_wan",
+      "records": 97,
+      "missing_count": 12,
+      "missing_rate": 12.37,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "investor_type_final",
+      "records": 634,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    },
+    {
+      "table_name": "equity_snapshot",
+      "field": "pdf_page",
+      "records": 634,
+      "missing_count": 0,
+      "missing_rate": 0.0,
+      "week8_principle": "PDF未披露留空；不把空值改写为0"
+    }
+  ],
+  "board_stats": [
+    {
+      "market": "主板",
+      "company_count": 2,
+      "subscription_records": 26,
+      "snapshot_records": 55,
+      "transfer_records": 0,
+      "total_records": 81,
+      "broad_pevc_records": 22,
+      "broad_pevc_record_share": 27.16
+    },
+    {
+      "market": "创业板",
+      "company_count": 2,
+      "subscription_records": 38,
+      "snapshot_records": 150,
+      "transfer_records": 1,
+      "total_records": 189,
+      "broad_pevc_records": 99,
+      "broad_pevc_record_share": 52.38
+    },
+    {
+      "market": "北交所",
+      "company_count": 2,
+      "subscription_records": 23,
+      "snapshot_records": 32,
+      "transfer_records": 2,
+      "total_records": 57,
+      "broad_pevc_records": 11,
+      "broad_pevc_record_share": 19.3
+    },
+    {
+      "market": "科创板",
+      "company_count": 2,
+      "subscription_records": 10,
+      "snapshot_records": 397,
+      "transfer_records": 1,
+      "total_records": 408,
+      "broad_pevc_records": 25,
+      "broad_pevc_record_share": 6.13
+    }
+  ],
+  "research_variables": [
+    {
+      "stock_code": "001282",
+      "company_short": "三联锻造",
+      "market": "主板",
+      "has_vc_or_pe": 1,
+      "vc_record_count": 4,
+      "pe_record_count": 0,
+      "broad_pevc_record_count": 8,
+      "broad_pevc_record_share": 22.22,
+      "natural_person_record_share": 77.78,
+      "distinct_investor_type_count": 4,
+      "transfer_event_count": 0,
+      "p1_review_item_count": 0,
+      "research_use_note": "可用于描述性统计；正式回归前需扩大样本并人工复核P1项。"
+    },
+    {
+      "stock_code": "603418",
+      "company_short": "友升股份",
+      "market": "主板",
+      "has_vc_or_pe": 1,
+      "vc_record_count": 0,
+      "pe_record_count": 14,
+      "broad_pevc_record_count": 14,
+      "broad_pevc_record_share": 31.11,
+      "natural_person_record_share": 51.11,
+      "distinct_investor_type_count": 3,
+      "transfer_event_count": 0,
+      "p1_review_item_count": 0,
+      "research_use_note": "可用于描述性统计；正式回归前需扩大样本并人工复核P1项。"
+    },
+    {
+      "stock_code": "301563",
+      "company_short": "云汉芯城",
+      "market": "创业板",
+      "has_vc_or_pe": 1,
+      "vc_record_count": 49,
+      "pe_record_count": 14,
+      "broad_pevc_record_count": 87,
+      "broad_pevc_record_share": 53.05,
+      "natural_person_record_share": 46.95,
+      "distinct_investor_type_count": 5,
+      "transfer_event_count": 1,
+      "p1_review_item_count": 0,
+      "research_use_note": "可用于描述性统计；正式回归前需扩大样本并人工复核P1项。"
+    },
+    {
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "market": "创业板",
+      "has_vc_or_pe": 0,
+      "vc_record_count": 0,
+      "pe_record_count": 0,
+      "broad_pevc_record_count": 12,
+      "broad_pevc_record_share": 50.0,
+      "natural_person_record_share": 50.0,
+      "distinct_investor_type_count": 3,
+      "transfer_event_count": 0,
+      "p1_review_item_count": 5,
+      "research_use_note": "可用于描述性统计；正式回归前需扩大样本并人工复核P1项。"
+    },
+    {
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "market": "科创板",
+      "has_vc_or_pe": 1,
+      "vc_record_count": 0,
+      "pe_record_count": 22,
+      "broad_pevc_record_count": 22,
+      "broad_pevc_record_share": 6.75,
+      "natural_person_record_share": 84.05,
+      "distinct_investor_type_count": 3,
+      "transfer_event_count": 0,
+      "p1_review_item_count": 3,
+      "research_use_note": "可用于描述性统计；正式回归前需扩大样本并人工复核P1项。"
+    },
+    {
+      "stock_code": "688775",
+      "company_short": "影石创新",
+      "market": "科创板",
+      "has_vc_or_pe": 1,
+      "vc_record_count": 0,
+      "pe_record_count": 3,
+      "broad_pevc_record_count": 3,
+      "broad_pevc_record_share": 3.7,
+      "natural_person_record_share": 92.59,
+      "distinct_investor_type_count": 3,
+      "transfer_event_count": 1,
+      "p1_review_item_count": 0,
+      "research_use_note": "可用于描述性统计；正式回归前需扩大样本并人工复核P1项。"
+    },
+    {
+      "stock_code": "920100",
+      "company_short": "三协电机",
+      "market": "北交所",
+      "has_vc_or_pe": 1,
+      "vc_record_count": 4,
+      "pe_record_count": 0,
+      "broad_pevc_record_count": 4,
+      "broad_pevc_record_share": 11.11,
+      "natural_person_record_share": 88.89,
+      "distinct_investor_type_count": 2,
+      "transfer_event_count": 0,
+      "p1_review_item_count": 0,
+      "research_use_note": "可用于描述性统计；正式回归前需扩大样本并人工复核P1项。"
+    },
+    {
+      "stock_code": "920116",
+      "company_short": "星图测控",
+      "market": "北交所",
+      "has_vc_or_pe": 0,
+      "vc_record_count": 0,
+      "pe_record_count": 0,
+      "broad_pevc_record_count": 7,
+      "broad_pevc_record_share": 36.84,
+      "natural_person_record_share": 31.58,
+      "distinct_investor_type_count": 4,
+      "transfer_event_count": 2,
+      "p1_review_item_count": 0,
+      "research_use_note": "可用于描述性统计；正式回归前需扩大样本并人工复核P1项。"
+    }
+  ],
+  "review_queue": [
+    {
+      "queue_id": "W8-W7-001",
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "source": "week7_issue_log",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "P1-人工复核",
+      "detail": "t0/报告期初: 无可求和比例",
+      "suggested_action": "回到PDF页码或证据段核验；确认为未披露时继续留空。"
+    },
+    {
+      "queue_id": "W8-W7-002",
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "source": "week7_issue_log",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "P1-人工复核",
+      "detail": "吸收合并后: 无可求和比例",
+      "suggested_action": "回到PDF页码或证据段核验；确认为未披露时继续留空。"
+    },
+    {
+      "queue_id": "W8-W7-003",
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "source": "week7_issue_log",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "P1-人工复核",
+      "detail": "第一次增资后: 无可求和比例",
+      "suggested_action": "回到PDF页码或证据段核验；确认为未披露时继续留空。"
+    },
+    {
+      "queue_id": "W8-W7-004",
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "source": "week7_issue_log",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "P1-人工复核",
+      "detail": "第二次增资后: 无可求和比例",
+      "suggested_action": "回到PDF页码或证据段核验；确认为未披露时继续留空。"
+    },
+    {
+      "queue_id": "W8-W7-005",
+      "stock_code": "301581",
+      "company_short": "黄山谷捷",
+      "source": "week7_issue_log",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "P1-人工复核",
+      "detail": "整体变更为股份公司后: 无可求和比例",
+      "suggested_action": "回到PDF页码或证据段核验；确认为未披露时继续留空。"
+    },
+    {
+      "queue_id": "W8-W7-006",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "week7_issue_log",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "P1-人工复核",
+      "detail": "t0/报告期初: 持股比例合计=670.6317%",
+      "suggested_action": "回到PDF页码或证据段核验；确认为未披露时继续留空。"
+    },
+    {
+      "queue_id": "W8-W7-007",
+      "stock_code": "",
+      "company_short": "三协电机/星图测控",
+      "source": "week7_issue_log",
+      "issue_type": "组内互查差异",
+      "status": "P2-保留记录",
+      "detail": "定向发行材料中出现“公开转让系统”，Auto误认为股权转让候选",
+      "suggested_action": "回到PDF页码或证据段核验；确认为未披露时继续留空。"
+    },
+    {
+      "queue_id": "W8-W7-008",
+      "stock_code": "",
+      "company_short": "云汉芯城/影石创新/赛分科技",
+      "source": "week7_issue_log",
+      "issue_type": "组内互查差异",
+      "status": "P2-保留记录",
+      "detail": "多轮融资与历史沿革表格密集，Auto候选多但转让主体不总是可直接解析",
+      "suggested_action": "回到PDF页码或证据段核验；确认为未披露时继续留空。"
+    },
+    {
+      "queue_id": "W8-W7-009",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "week7_issue_log",
+      "issue_type": "组内互查差异",
+      "status": "P2-保留记录",
+      "detail": "部分记录的股份数单位疑似为股而非万股，直接用金额/股份数会得到0.01元/股等异常价格。",
+      "suggested_action": "回到PDF页码或证据段核验；确认为未披露时继续留空。"
+    },
+    {
+      "queue_id": "W8-SNAP-010",
+      "stock_code": "688758",
+      "company_short": "赛分科技",
+      "source": "snapshot_ratio_check",
+      "issue_type": "snapshot_ratio_sum",
+      "status": "P1-人工复核",
+      "detail": "t0/报告期初：比例合计=670.6317",
+      "suggested_action": "比例合计明显异常，优先进入人工复核。"
+    }
+  ]
+}

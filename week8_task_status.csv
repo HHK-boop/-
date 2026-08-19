@@ -1,0 +1,6 @@
+﻿week8_task,status,evidence_file,remaining_work
+完善8家公司三表数据质量,已完成基础审计,data/derived/quality_metrics_week8.csv,P1问题仍需回PDF人工核验。
+统一investor_type分类口径,已完成统计与覆盖率检查,data/derived/investor_type_stats_week8.csv,复杂基金仍需备案编码、GP/LP结构辅助确认。
+整理组内互查差异,已转入问题队列,review/week8_review_queue.csv,下一周逐条标注处理结果。
+建立PostgreSQL初步表结构,已扩展schema和导入脚本,database/schema_postgresql_week8.sql,拿到数据库连接信息后执行全量导入。
+补充本周短报告,已完成,report/霍泓锟_第八周任务报告.pdf,报告可继续根据老师反馈补充PDF原文页码截图。

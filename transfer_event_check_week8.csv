@@ -1,0 +1,5 @@
+﻿check_id,record_id,stock_code,company_short,transferor_name,transferee_name,status,issue_note,week8_action
+TR-301563-001,GOLD-TR-301563-001,301563,云汉芯城,深圳市云汉电子有限公司,曾烨,INFO,金额和单价均未披露,未披露字段保留空值；若缺少证据则回PDF复核
+TR-688775-002,GOLD-TR-688775-001,688775,影石创新,德朴投资,汇智同裕,PASS,核心字段与证据齐全,未披露字段保留空值；若缺少证据则回PDF复核
+TR-920116-003,GOLD-TR-920116-001,920116,星图测控,罗永红,牛威,PASS,核心字段与证据齐全,未披露字段保留空值；若缺少证据则回PDF复核
+TR-920116-004,GOLD-TR-920116-002,920116,星图测控,王金林,吴功友,PASS,核心字段与证据齐全,未披露字段保留空值；若缺少证据则回PDF复核

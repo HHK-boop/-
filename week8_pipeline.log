@@ -1,0 +1,5 @@
+Week 8 pipeline finished at 2026-08-13 13:50:11
+Input rows: subscription=97, snapshot=634, transfer=4
+Derived broad PE/VC records=157
+P1 review items=7
+Outputs written under data/derived, review, database, and outputs.
