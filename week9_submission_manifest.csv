@@ -1,0 +1,16 @@
+﻿path,description,exists,bytes
+requirements.txt,Python依赖清单,True,52
+code/week9_research_pipeline.py,第九周主流程,True,35926
+code/build_week9_workbook.py,Excel汇总生成脚本（默认Python版）,True,12022
+code/build_week9_workbook.mjs,Excel汇总生成脚本（Codex预览辅助）,True,10869
+code/build_week9_report_docx.py,周报DOCX生成脚本,True,11065
+code/build_week9_report_pdf.py,周报PDF生成脚本,True,7886
+review/review_queue_resolved_week9.csv,P1/P2复核队列闭环表,True,3638
+data/derived/research_variables_week9.csv,第九周研究变量,True,1479
+data/derived/ownership_metrics_week9.csv,股权分散度指标,True,1475
+data/derived/board_stats_week9.csv,板块描述性统计,True,532
+database/schema_postgresql_week9.sql,PostgreSQL建表脚本,True,2623
+database/import_week9_tables.sql,PostgreSQL导入脚本,True,1115
+outputs/week9_summary_workbook.xlsx,第九周Excel汇总,True,18189
+report/霍泓锟_第九周任务报告.docx,第九周报告DOCX,True,42254
+report/霍泓锟_第九周任务报告.pdf,第九周报告PDF,True,159092

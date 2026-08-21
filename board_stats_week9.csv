@@ -1,0 +1,5 @@
+﻿market,company_count,vc_pe_supported_count,avg_broad_pevc_record_share,avg_distinct_investor_type_count,avg_top1_ratio_pct,avg_effective_shareholder_count,week9_interpretation
+主板,2,2,26.665,3.5,44.45,3.3375,8家公司小样本描述，不做显著性推断
+创业板,2,1,51.525,4.0,42.45,4.773,8家公司小样本描述，不做显著性推断
+北交所,2,1,23.975,3.0,54.665,2.718,8家公司小样本描述，不做显著性推断
+科创板,2,2,5.225,3.0,29.9376,7.465,8家公司小样本描述，不做显著性推断

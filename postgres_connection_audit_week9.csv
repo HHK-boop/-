@@ -1,0 +1,4 @@
+﻿check_name,status,detail
+psql_version,PASS,psql (PostgreSQL) 18.4
+pg_isready,PASS,localhost:5432 - accepting connections
+postgres_import,READY_NEED_PASSWORD,PostgreSQL服务可用；本机未提供免密认证。已生成schema和\copy导入脚本，设置PGPASSWORD后可直接运行。
