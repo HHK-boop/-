@@ -1,0 +1,7 @@
+run_time=2026-08-26 18:00:00
+company_count=8
+research_panel_rows=8
+investor_profile_rows=192
+fund_queue_rows=32
+regression_models=10
+postgres_status=READY_NEED_PASSWORD

@@ -1,0 +1,5 @@
+﻿market,company_count,avg_pevc_strength_index,avg_broad_pevc_record_share,avg_top1_ratio_pct,avg_hhi,avg_effective_shareholder_count,caution_company_count,week10_interpretation
+主板,2,26.742,26.665,44.45,0.3231,3.3375,0,板块均值仅用于观察方向，样本量为每板块2家公司
+创业板,2,54.529,51.525,42.45,0.2493,4.773,1,板块均值仅用于观察方向，样本量为每板块2家公司
+北交所,2,22.5515,23.975,54.665,0.3794,2.718,0,板块均值仅用于观察方向，样本量为每板块2家公司
+科创板,2,4.8115,5.225,29.9376,0.134,7.465,1,板块均值仅用于观察方向，样本量为每板块2家公司

@@ -1,0 +1,12 @@
+item,value,source_note
+数据库类型,PostgreSQL临时实例,使用本机PostgreSQL 18工具链，在55432端口独立启动，不依赖5432主库口令
+当前数据库,postgres,psql查询current_database()所得
+当前用户,postgres,psql查询current_user所得
+监听端口,55432,由run_postgres_temp_week10.ps1指定
+导入表数量,10,从information_schema.tables统计public schema中的本周表
+导入总行数,406,10张结果表合计行数
+公司样本数,8,company_research_panel_week10
+投资主体画像数,192,investor_profile_week10
+基金核验队列数,32,fund_enrichment_queue_week10
+备案编码/GP/LP已披露记录,0,三表未直接披露则保持空值，不用名称推断
+主库5432状态,服务可用但需要口令,已用psql -w测试，默认postgres用户返回no password supplied

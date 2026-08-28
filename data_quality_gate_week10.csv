@@ -1,0 +1,9 @@
+﻿stock_code,company_short,market,ratio_timepoints,usable_ratio_timepoints,invalid_ratio_timepoints,abnormal_ratio_timepoints,blank_ratio_timepoints,week8_p1_count,week9_closed_p1_count,quality_gate,quality_note
+001282,三联锻造,主板,6,6,0,0,0,0,0,通过,可进入描述性统计
+301563,云汉芯城,创业板,6,6,0,0,0,0,0,通过,可进入描述性统计
+301581,黄山谷捷,创业板,5,4,1,0,0,5,5,通过,可进入描述性统计
+603418,友升股份,主板,4,4,0,0,0,0,0,通过,可进入描述性统计
+688758,赛分科技,科创板,1,0,1,1,0,2,2,谨慎使用,存在比例合计异常时点，研究变量应使用筛选后的快照
+688775,影石创新,科创板,4,3,1,0,0,0,0,通过,可进入描述性统计
+920100,三协电机,北交所,1,1,0,0,0,0,0,通过,可进入描述性统计
+920116,星图测控,北交所,3,3,0,0,0,0,0,通过,可进入描述性统计

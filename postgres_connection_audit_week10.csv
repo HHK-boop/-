@@ -1,0 +1,4 @@
+﻿check_name,status,detail
+psql_version,PASS,psql (PostgreSQL) 18.4
+pg_isready,PASS,localhost:5432 - accepting connections
+postgres_import,READY_NEED_PASSWORD,PostgreSQL服务可用时仍需本机口令；本周生成导入脚本但不伪造已入库

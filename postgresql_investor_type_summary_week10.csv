@@ -1,0 +1,8 @@
+investor_type_final,investor_profile_rows,source_record_count,company_mentions,broad_pevc_profiles,fund_like_profiles
+自然人,145,533,145,0,0
+PE,12,53,12,12,7
+VC,10,57,10,10,10
+员工持股平台,10,47,10,0,0
+产业资本/CVC/法人股东,9,33,9,9,9
+其他投资平台,5,15,5,5,5
+其他/待人工复核,1,1,1,0,1

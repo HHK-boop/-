@@ -1,0 +1,14 @@
+{
+  "run_date": "2026-08-26",
+  "run_time": "2026-08-26 18:00:00",
+  "company_count": 8,
+  "research_panel_rows": 8,
+  "investor_profile_rows": 192,
+  "fund_queue_rows": 32,
+  "descriptive_variables": 7,
+  "correlation_pairs": 121,
+  "regression_models": 10,
+  "caution_company_count": 2,
+  "week9_unresolved_p1": 0,
+  "postgres_status": "READY_NEED_PASSWORD"
+}

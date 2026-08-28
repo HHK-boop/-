@@ -1,0 +1,11 @@
+model_id,sample_scope,dependent_variable,independent_variable,n,coef_x,r_squared,model_note
+全样本:effective_shareholder_count~broad_pevc_record_share,全样本,effective_shareholder_count,broad_pevc_record_share,7,-0.013265,0.013854,探索性OLS，n=8或更小，不能解释为因果关系
+全样本:effective_shareholder_count~pevc_strength_index,全样本,effective_shareholder_count,pevc_strength_index,7,0.007692,0.005745,探索性OLS，n=8或更小，不能解释为因果关系
+全样本:hhi~broad_pevc_record_share,全样本,hhi,broad_pevc_record_share,7,-0.000081,0.000153,探索性OLS，n=8或更小，不能解释为因果关系
+全样本:top1_ratio_pct~broad_pevc_record_share,全样本,top1_ratio_pct,broad_pevc_record_share,7,0.041449,0.002642,探索性OLS，n=8或更小，不能解释为因果关系
+全样本:top1_ratio_pct~pevc_strength_index,全样本,top1_ratio_pct,pevc_strength_index,7,-0.024214,0.001112,探索性OLS，n=8或更小，不能解释为因果关系
+剔除谨慎样本:effective_shareholder_count~broad_pevc_record_share,剔除谨慎样本,effective_shareholder_count,broad_pevc_record_share,6,0.001822,0.000217,探索性OLS，n=8或更小，不能解释为因果关系
+剔除谨慎样本:effective_shareholder_count~pevc_strength_index,剔除谨慎样本,effective_shareholder_count,pevc_strength_index,6,0.015402,0.023363,探索性OLS，n=8或更小，不能解释为因果关系
+剔除谨慎样本:hhi~broad_pevc_record_share,剔除谨慎样本,hhi,broad_pevc_record_share,6,-0.000956,0.01717,探索性OLS，n=8或更小，不能解释为因果关系
+剔除谨慎样本:top1_ratio_pct~broad_pevc_record_share,剔除谨慎样本,top1_ratio_pct,broad_pevc_record_share,6,-0.05134,0.003265,探索性OLS，n=8或更小，不能解释为因果关系
+剔除谨慎样本:top1_ratio_pct~pevc_strength_index,剔除谨慎样本,top1_ratio_pct,pevc_strength_index,6,-0.065607,0.008024,探索性OLS，n=8或更小，不能解释为因果关系
