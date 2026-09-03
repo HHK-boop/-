@@ -1,0 +1,12 @@
+﻿variable,cn_name,table,type,definition,derivation
+stock_code,证券代码,company_research_panel_week10,text,发行人股票代码或样本代码。,第九/十周公司维表承接。
+company_short,公司简称,company_research_panel_week10,text,发行人简称。,公司样本清单。
+market,上市板块,company_research_panel_week10,category,主板、创业板、科创板、北交所。,任务书统一样本口径。
+pevc_strength_index,PE/VC进入强度,company_research_panel_week10,numeric,综合PE/VC记录占比和持股比例形成的探索性指标。,第十周派生。
+pre_ipo_dispersion_index,上市前股权分散度,company_research_panel_week10,numeric,有效股东数等信息形成的分散度指标。,第十周派生。
+top1_ratio_pct,第一大股东持股比例,company_research_panel_week10,numeric,发行前第一大股东持股比例。,股权快照表抽取。
+hhi,股权集中度HHI,company_research_panel_week10,numeric,股东持股比例平方和，用于衡量集中度。,股权快照计算；异常比例时剔除。
+investor_type_final,投资者类型,fund_deep_enrichment_queue_week11,category,VC、PE、CVC/产业资本、自然人等分类。,第十周规则承接，第十一周人工核验优先级排序。
+amac_record_code,基金备案编码,fund_deep_enrichment_queue_week11,text,私募基金备案编码。,PDF或基金业协会等外部来源确认；未披露留空。
+gp_name,基金管理人/GP,fund_deep_enrichment_queue_week11,text,基金管理人或普通合伙人。,PDF或外部来源确认；未披露留空。
+lp_structure,LP结构,fund_deep_enrichment_queue_week11,text,基金出资人层级或主要LP信息。,仅在来源披露时填写，避免名称推断。

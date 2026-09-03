@@ -1,0 +1,26 @@
+2026-09-02 11:35:48.179 CST [32736] LOG:  starting PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35226, 64-bit
+2026-09-02 11:35:48.187 CST [32736] LOG:  listening on IPv4 address "127.0.0.1", port 55433
+2026-09-02 11:35:48.299 CST [36940] LOG:  database system was shut down at 2026-09-02 11:35:42 CST
+2026-09-02 11:35:48.315 CST [32736] LOG:  database system is ready to accept connections
+2026-09-02 11:35:48.948 CST [37780] FATAL:  role "29818" does not exist
+2026-09-02 11:35:49.062 CST [35428] FATAL:  role "29818" does not exist
+2026-09-02 11:35:49.281 CST [31788] LOG:  could not send data to client: An existing connection was forcibly closed by the remote host.
+	
+2026-09-02 11:35:49.282 CST [31788] FATAL:  connection to client lost
+2026-09-02 11:36:43.630 CST [9996] FATAL:  role "29818" does not exist
+2026-09-02 11:36:43.723 CST [34180] FATAL:  role "29818" does not exist
+2026-09-02 11:36:43.817 CST [38964] LOG:  could not send data to client: An existing connection was forcibly closed by the remote host.
+	
+2026-09-02 11:36:43.818 CST [38964] FATAL:  connection to client lost
+2026-09-02 11:37:45.114 CST [17096] FATAL:  role "29818" does not exist
+2026-09-02 11:37:45.211 CST [25372] FATAL:  role "29818" does not exist
+2026-09-02 11:38:49.680 CST [32404] FATAL:  role "29818" does not exist
+2026-09-02 11:38:49.776 CST [39480] FATAL:  role "29818" does not exist
+2026-09-02 11:39:32.796 CST [27924] FATAL:  role "29818" does not exist
+2026-09-02 11:39:32.901 CST [31788] FATAL:  role "29818" does not exist
+2026-09-02 11:40:13.187 CST [20184] FATAL:  role "29818" does not exist
+2026-09-02 11:40:13.252 CST [27024] FATAL:  role "29818" does not exist
+2026-09-02 11:40:48.290 CST [6596] LOG:  checkpoint starting: time
+2026-09-02 11:41:08.611 CST [6596] LOG:  checkpoint complete: wrote 183 buffers (1.1%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=20.054 s, sync=0.239 s, total=20.322 s; sync files=172, longest=0.011 s, average=0.002 s; distance=1836 kB, estimate=1836 kB; lsn=0/19BC3C0, redo lsn=0/19BC330
+2026-09-02 11:45:48.619 CST [6596] LOG:  checkpoint starting: time
+2026-09-02 11:45:51.935 CST [6596] LOG:  checkpoint complete: wrote 30 buffers (0.2%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=3.265 s, sync=0.024 s, total=3.316 s; sync files=5, longest=0.012 s, average=0.005 s; distance=200 kB, estimate=1672 kB; lsn=0/19EE468, redo lsn=0/19EE410

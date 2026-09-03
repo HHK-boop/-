@@ -1,0 +1,4 @@
+﻿question_id,research_question,dependent_variable,key_explanatory_variable,controls,sample_scope,method,current_limit,week11_output
+RQ1,上市前PE/VC进入强度是否与股权分散度相关？,pre_ipo_dispersion_index / effective_shareholder_count,pevc_strength_index / broad_pevc_record_share,"market fixed effect, top1_ratio_pct, transfer_event_count",当前8家公司，其中主分析可用 7 家；后续扩样后再做正式推断。,描述统计 + 相关系数 + 探索性OLS,样本量仍小，结论只能解释为流程演示和变量可行性测试。,变量字典、研究设计矩阵、PostgreSQL导入脚本
+RQ2,不同板块的上市前融资结构是否存在可观察差异？,pevc_strength_index / broad_pevc_ratio_sum_pct,board_group / market,"analysis_sample_flag, caution_flag",主板、创业板、科创板、北交所四类样本均保留，但异常样本单独标记。,板块分组均值 + 缺失/异常披露解释,板块内样本过少，暂不进行显著性夸大。,板块统计和质量仪表盘
+RQ3,基金型投资者的深度披露完整性如何影响自动化抽取质量？,needs_amac_check / needs_gp_lp_check,"investor_type_final, manual_priority","market, source_tables, pdf_pages_observed",第十周32条基金核验队列。,人工核验队列 + 字段完整率 + 失败原因归类,基金备案、GP、LP多不在招股书三表直接披露，需要外部来源但必须留痕。,基金深度字段核验队列和人工模板

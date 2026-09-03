@@ -1,0 +1,7 @@
+item,value,source_note
+数据库类型,PostgreSQL临时实例/长期库脚本,Week11同时提供临时复现与长期库迁移脚本
+临时库导入表数量,10,pevc_week11 schema中的Week11派生表
+临时库导入总行数,187,Week11派生表合计行数
+基金深度核验队列数,32,week11_fund_deep_enrichment_queue
+P1优先核验基金主体数,17,manual_priority以P1开头
+备案编码/GP/LP已披露记录,0,只有任一深度字段非空才计数

@@ -1,0 +1,9 @@
+﻿item,status,evidence
+统一8家公司继续处理,完成,data/input_week10/company_research_panel_week10.csv
+补入三联锻造和星图测控后不再用替代样本,完成,第十周面板已包含001282和920116
+Gold/Auto/Final分开,延续,本周不从Final生成Auto，只承接第十周derived与PG结果
+Auto从PDF或Markdown独立发现事件,说明保留,本周重点转向数据库和基金核验队列，保留第六至十周Auto规则
+PostgreSQL结果披露,完成,database/postgresql_week11_*.csv
+备案编码/GP/LP未披露留空,完成,data/derived/week11_fund_deep_enrichment_queue.csv
+可复现代码入口,完成,code/run_all_week11_codex.ps1
+报告、Excel、日志齐全,完成,report/ outputs/ logs/ validation/

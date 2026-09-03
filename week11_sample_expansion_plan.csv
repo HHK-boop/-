@@ -1,0 +1,5 @@
+﻿plan_id,period,scope,target,success_criteria,status
+EXP-01,第十二周,补齐8家公司长期库导入,在获得PGPASSWORD后，把Week11 derived表写入本机5432 pevc_week11 schema。,主库行数与CSV行数一致；导出postgresql_week11_persistent_import_counts.csv。,待口令
+EXP-02,第十二周,基金深度字段P1核验,优先核验P1基金主体备案编码、GP、LP结构。,每条修改均有PDF页码或外部来源链接；未披露继续留空。,待人工核验
+EXP-03,未来一个月,样本扩展,在当前主板2、创业板2、科创板2、北交所2基础上，每个板块至少补入2家公司。,新增样本必须完成PDF、Markdown、Auto、Gold/Final分离和Cross-check。,计划中
+EXP-04,未来一个月,研究分析,把描述统计推进到可解释的回归/稳健性表。,每个结果表能追溯到变量字典、Final记录和PDF证据。,计划中

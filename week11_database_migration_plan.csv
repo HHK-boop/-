@@ -1,0 +1,6 @@
+﻿step_id,task,status,evidence,remaining_risk,next_action
+DB-01,长期库连接审计,READY_NEED_PASSWORD,5432端口检测结果：127.0.0.1:5432 - accepting connections；当前未设置 PGPASSWORD，不能无交互导入长期库。,如果无主库口令，只能完成脚本准备和临时库复现。,设置 PGPASSWORD 后运行 database/run_postgres_persistent_week11.ps1。
+DB-02,Schema固化,READY,已生成 database/schema_postgresql_week11.sql，统一放入 pevc_week11 schema。,文本字段较稳妥，后续可在字段稳定后再细化 numeric/date 类型。,主库导入后执行行数对账。
+DB-03,CSV导入脚本,READY,已生成 import_week11_tables.sql 与 run_postgres_persistent_week11.ps1。,Windows路径含中文，需从提交包根目录运行。,使用脚本中的相对路径导入，避免写死个人电脑目录。
+DB-04,临时PostgreSQL复现,PASS_AFTER_RUN,第十周临时库已导入总行数 406；第十一周临时库脚本继续验证派生表。,临时库只验证SQL和CSV可导入，不代表长期主库权限已经打通。,运行 database/run_postgres_temp_week11.ps1 生成本周PG披露表。
+DB-05,Gold/Auto/Final分层原则,ENFORCED,第十一周只从 input_week10 与 derived 表生成，不从人工Final反推Auto。,外部基金核验结果需要人工记录来源后才能进入Final。,把人工核验结果写入 final 表，并记录修改前后值与原因。

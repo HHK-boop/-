@@ -1,0 +1,48 @@
+﻿run_time=2026-09-02 11:40:13
+runtime_root=C:\Users\29818\AppData\Local\Temp\hhk_week11_postgresql_runtime_utf8
+port=55433
+127.0.0.1:55433 - accepting connections
+SET
+CREATE SCHEMA
+SET
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+DROP TABLE
+CREATE TABLE
+step=schema exit_code=0
+SET
+SET
+COPY 5
+COPY 3
+COPY 32
+COPY 96
+COPY 3
+COPY 11
+COPY 4
+COPY 11
+COPY 8
+COPY 14
+step=import exit_code=0
+SET
+SET
+COPY 10
+COPY 6
+step=queries exit_code=0
+postgres_temp_import_status=PASS
+step=status_query exit_code=0

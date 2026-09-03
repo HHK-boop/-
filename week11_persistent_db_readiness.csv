@@ -1,0 +1,4 @@
+﻿check_item,result,detail,action
+PostgreSQL客户端工具,存在,5432端口检测结果：127.0.0.1:5432 - accepting connections；当前未设置 PGPASSWORD，不能无交互导入长期库。,设置 PGPASSWORD 后运行 database/run_postgres_persistent_week11.ps1。
+PGPASSWORD环境变量,未设置,用于非交互连接本机5432主库。,设置后运行长期库导入脚本。
+长期库导入策略,脚本已准备,不把临时库成功等同于长期库成功。,导入后使用table_counts对账。
