@@ -1,0 +1,5 @@
+﻿source_id,source_name,source_type,local_path,records_available,usable_records,fields_provided,week12_usage,source_limitation
+SRC01,第十一周研究面板与基金核验队列,前期Final/派生表,data/input_week11/,8,8,公司代码、板块、PE/VC强度、基金核验队列、PG导入披露,作为基线样本和字段口径，不作为新增公司来源。,AMAC/GP/LP仍需人工或外部权威来源补充。
+SRC02,北交所Week3扩展样本清单与页码化文本,官方URL+本地解析文本,data/source_inputs/bse_week3_extended_company_list.csv；team-star/outputs/week3_sample_outputs/parsed_texts/,33,33,公司、代码、上市日期、招股书URL、页码化文本、关键词命中,北交所优先扩样，适合快速跑章节定位与人工复核。,已解析文本能定位页码，但仍需回原PDF确认关键表格。
+SRC03,科创板2021-2025巨潮PDF抓取日志,CNInfo URL+本地PDF,data/source_inputs/cninfo_star_crawler_log.csv；任务一_招股书抓取_科创板_2021-2025/PDF库/,259,259,公司、代码、上市日期、公告日期、PDF地址、本地PDF路径、文件大小,跨板块推广验证，从PDF转Markdown开始。,尚未全部页码化，需先完成PDF->Markdown再抽取。
+SRC04,第十一周基金深度核验队列,待人工/外部核验队列,data/input_week11/week11_fund_deep_enrichment_queue.csv,32,32,基金主体、类型、页码、需核AMAC/GP/LP,继续作为基金深度字段补充的人工队列。,不得用基金名称反推出备案编码、GP或LP。

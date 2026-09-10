@@ -1,0 +1,6 @@
+﻿day,focus,action,expected_output,acceptance
+第1天（2026-09-09）,来源台账和扩样公司 universe,合并第十一周、北交所解析文本、科创板PDF抓取日志，生成去重后的公司来源台账。,week12_source_catalog.csv；week12_expanded_company_universe.csv,每家公司至少有一个URL或本地文件路径作为来源。
+第2天（2026-09-10）,北交所优先扩样,处理P1北交所队列24家公司，先从页码化文本进行TOC和关键词定位。,章节定位结果、关键词命中摘要、review队列,定位页码能回到原始文本；失败公司明确失败原因。
+第3天（2026-09-11）,科创板跨板块推广,处理P2科创板队列24家公司，优先完成PDF->Markdown，并验证表格抽取是否稳定。,Markdown解析清单、三表候选表格,每家至少能说明PDF路径、公告日期和处理状态。
+第4天（2026-09-12）,字段来源和人工核验,对投资者类型、AMAC/GP/LP、股权比例异常建立人工核验模板。,week12_field_source_matrix.csv；人工核验清单,未披露字段留空，不用名称反推。
+第5天（2026-09-13）,数据库和提交材料,把扩样台账导入临时PostgreSQL，生成Excel和PDF报告。,PostgreSQL披露表、Excel汇总、PDF计划报告,统一入口可运行，日志完整，报告能说明数据来源。

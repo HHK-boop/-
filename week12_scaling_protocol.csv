@@ -1,0 +1,9 @@
+﻿step_no,stage,input,method,output,risk_control
+01,样本纳入,公司清单/公告URL/PDF路径,按代码去重，保留来源组和来源URL,expanded_company_universe,同一公司多来源不混并字段，只保留来源优先级。
+02,文件确认,local_pdf_path/local_text_path,检查文件存在、大小、页码数,source_status/page_count,本地缺失不伪造，进入待下载队列。
+03,PDF转Markdown,PDF,MinerU或既有解析脚本转为页码化Markdown,parsed_text,保留页码标记，便于回PDF截图。
+04,章节定位,Markdown/页码化文本,TOC优先，关键词兜底：历史沿革、股本形成、股东情况、增资、转让、私募、创业投资,candidate_sections,定位失败记录失败原因。
+05,表格抽取,候选章节Markdown表格,解析认缴、股权快照、股权转让三类表；处理rowspan/colspan,auto_output,不从Gold或Final生成Auto。
+06,人工Gold,PDF原文/截图/页码,人工核对关键表格和字段,manual_gold,记录原值、修正值、原因和证据。
+07,Cross-check,Auto/Gold/Final,比对公司、主体、金额、比例、日期、类型,validation,异常样本不进入主分析。
+08,数据库入库,Final与来源台账,PostgreSQL schema统一管理,database/postgresql_week12_*.csv,长期库失败时保留临时库可复现结果。

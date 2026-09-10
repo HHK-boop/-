@@ -1,0 +1,11 @@
+﻿table_name,row_count,source_csv,database_schema,load_status,use_case
+week12_source_catalog,4,data/derived/week12_source_catalog.csv,pevc_week12,临时库脚本可导入,第十二周来源追溯与扩样管理
+week12_source_inventory,300,data/derived/week12_source_inventory.csv,pevc_week12,临时库脚本可导入,第十二周来源追溯与扩样管理
+week12_expanded_company_universe,298,data/derived/week12_expanded_company_universe.csv,pevc_week12,临时库脚本可导入,第十二周来源追溯与扩样管理
+week12_processing_queue,56,data/derived/week12_processing_queue.csv,pevc_week12,临时库脚本可导入,第十二周来源追溯与扩样管理
+week12_source_summary,3,data/derived/week12_source_summary.csv,pevc_week12,临时库脚本可导入,第十二周来源追溯与扩样管理
+week12_board_coverage_summary,4,data/derived/week12_board_coverage_summary.csv,pevc_week12,临时库脚本可导入,第十二周来源追溯与扩样管理
+week12_field_source_matrix,7,data/derived/week12_field_source_matrix.csv,pevc_week12,临时库脚本可导入,第十二周来源追溯与扩样管理
+week12_weekly_plan,5,data/derived/week12_weekly_plan.csv,pevc_week12,临时库脚本可导入,第十二周来源追溯与扩样管理
+week12_scaling_protocol,8,data/derived/week12_scaling_protocol.csv,pevc_week12,临时库脚本可导入,第十二周来源追溯与扩样管理
+week12_quality_gates,6,data/derived/week12_quality_gates.csv,pevc_week12,临时库脚本可导入,第十二周来源追溯与扩样管理

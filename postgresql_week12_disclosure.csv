@@ -1,0 +1,9 @@
+item,value,source_note
+数据库类型,PostgreSQL临时实例/扩样计划表,用于验证第十二周来源台账和扩样队列可入库
+临时库导入表数量,12,pevc_week12 schema中的Week12派生表
+临时库导入总行数,708,Week12派生表合计行数
+扩样公司universe数量,298,week12_expanded_company_universe
+本周优先处理队列数量,56,week12_processing_queue
+含URL来源公司数量,298,prospectus_url或source_page_url非空
+含本地PDF公司数量,257,local_pdf_path非空
+含页码化文本公司数量,41,local_text_path非空

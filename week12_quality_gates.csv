@@ -1,0 +1,7 @@
+﻿gate_id,gate,rule,failure_action
+G01,来源完整性,每家公司必须至少有prospectus_url、source_page_url、local_pdf_path或local_text_path之一。,进入待补来源队列。
+G02,PDF/文本存在性,P1/P2处理队列必须存在本地PDF或本地页码化文本。,暂不进入本周处理。
+G03,字段披露边界,AMAC/GP/LP等深度字段不得由名称推断。,字段留空并写明未披露。
+G04,Auto独立性,Auto必须从PDF或Markdown生成，不允许读取Gold/Final主体和页码。,重新运行Auto脚本。
+G05,人工复核,每批扩样至少抽查10%公司，且P1基金主体优先复核。,补人工核验记录。
+G06,数据库可追溯,导入数据库的表必须能回到CSV和来源路径。,补source_id和路径字段。

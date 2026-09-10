@@ -1,0 +1,8 @@
+﻿field_group,field_name,primary_source,source_evidence,auto_method,manual_check,missing_rule
+公司基本信息,公司名称/代码/板块/上市日期,公开样本清单、北交所样本清单、巨潮抓取日志,source_page_url/prospectus_url/local_pdf_path/local_text_path,从清单字段直接读取,核对招股书封面和公告日期,清单缺失则回公告页面补充
+PDF文件信息,PDF路径/文件大小/页码数,本地PDF库或页码化文本,local_pdf_path/local_text_path/page_count/file_size_mb,文件系统统计+pypdf页数读取/页码标记计数,抽样打开PDF核对封面,无本地PDF则标记待下载
+章节定位,历史沿革/股本形成/股东情况页码,Markdown或页码化文本,关键词命中和章节TOC,TOC优先，关键词兜底,每家公司至少核2-3处原文,定位失败进入review队列
+三表抽取,认缴/股权快照/股权转让,Markdown表格和PDF原表,表格标题、页码、原文片段,Markdown表格解析，rowspan/colspan补齐,抽查比例合计、时间顺序和交易主体,PDF没有披露的字段留空
+投资者类型,VC/PE/CVC/自然人/员工平台,主体名称+上下文+人工字典,investor_type_final与分类依据,规则分类后人工复核P1/P2,基金、合伙企业、产业资本分别处理,不能判断时标为其他/待人工复核
+基金深度字段,备案编码/GP/LP结构,PDF原文；基金业协会；工商信息,PDF页码、外部来源URL、核验日期,只生成待核队列，不自动推断,逐条记录来源和修改前后值,PDF和外部来源均未披露则留空
+交叉校验,比例合计/金额范围/时间顺序,Auto表、Gold表、Final表,cross_check结果和人工备注,规则脚本标记异常,对异常记录回PDF核对,无法解释的异常不进入主分析

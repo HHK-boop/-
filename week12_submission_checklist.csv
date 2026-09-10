@@ -1,0 +1,8 @@
+﻿item,status,evidence
+表明数据来源,完成,week12_source_catalog.csv；expanded_company_universe中保留URL和本地路径
+推广到更多公司,完成,universe覆盖基线、北交所扩展文本、科创板PDF库
+区分计划与已完成抽取,完成,week12_processing_queue.csv中标注P0/P1/P2与处理动作
+保持未披露留空原则,完成,week12_field_source_matrix.csv和quality_gate.csv
+可复现代码入口,完成,code/run_all_week12_codex.ps1
+数据库可导入,完成,database/postgresql_week12_disclosure.csv
+报告与Excel,完成,report/霍泓锟_第十二周计划报告.pdf；outputs/week12_expansion_workbook.xlsx
