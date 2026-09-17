@@ -1,0 +1,6 @@
+﻿event_code,event_type,candidate_records,companies_covered,high_confidence_records,with_date,with_amount_or_shares,use_note
+capital_increase,增资认缴,63,11,7,37,33,Auto候选数量，需人工回原文确认后才能进入Gold/Final
+equity_transfer,股权转让,70,12,5,48,25,Auto候选数量，需人工回原文确认后才能进入Gold/Final
+equity_snapshot,股权快照,85,12,11,41,47,Auto候选数量，需人工回原文确认后才能进入Gold/Final
+fund_filing,基金备案,19,8,6,13,8,Auto候选数量，需人工回原文确认后才能进入Gold/Final
+special_rights,特殊投资条款,38,12,4,31,16,Auto候选数量，需人工回原文确认后才能进入Gold/Final

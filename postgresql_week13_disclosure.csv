@@ -1,0 +1,15 @@
+item,value,source_note
+数据库类型,PostgreSQL临时实例,验证第十三周扩样结果可以重复导入和查询
+导入表数量,11,pevc_week13 schema
+导入总行数,492,11张派生表合计
+首批扩样公司数,12,week13_selected_companies
+页码化文本总页数,2160,week13_selected_companies.page_count
+Auto候选记录数,301,含保留与规则排除记录
+保留Auto候选数,275,auto_status以保留开头
+转让系统语境排除数,26,auto_status以排除开头
+去重投资主体候选数,52,仍需人工确认分类
+人工复核队列数,28,优先核对低/中置信及转让/备案
+旧定位页平均找回率,0.7708,定位一致性，不等同Gold准确率
+已填写AMAC编码数,0,未披露保持空值
+已填写GP数,0,未披露保持空值
+已填写LP结构数,0,未披露保持空值

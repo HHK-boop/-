@@ -1,0 +1,17 @@
+{
+  "run_date": "2026-09-16",
+  "selected_company_count": 12,
+  "source_page_count": 2160,
+  "chapter_locator_record_count": 48,
+  "auto_candidate_record_count": 301,
+  "retained_candidate_record_count": 275,
+  "excluded_transfer_boilerplate_count": 26,
+  "investor_candidate_record_count": 125,
+  "unique_investor_candidate_count": 52,
+  "manual_review_queue_count": 28,
+  "old_candidate_average_page_recovery_rate": 0.7708,
+  "companies_with_all_four_chapter_groups": 11,
+  "quality_checks_passed": 8,
+  "quality_checks_total": 8,
+  "interpretation": "上述数量均为Auto定位与候选记录，不等同于人工Gold事件数。"
+}
